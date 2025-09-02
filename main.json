@@ -1,0 +1,1 @@
+<bound method Response.json of <Response [200]>>
