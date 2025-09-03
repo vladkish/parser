@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from ip_test import display_user_agent
 import fake_useragent
+from github import avatar_github
 
 link = 'https://brain.com.ua/ukr/Mobilniy_telefon_Apple_iPhone_16_Pro_Max_256GB_Black_Titanium-p1145443.html'
 
@@ -35,10 +35,10 @@ for content in block:
 
 if __name__ == '__main__':
     try:
-        with open('main.json', 'w', encoding='utf-8') as file:
+        with open('../main.json', 'w', encoding='utf-8') as file:
             json.dump(context, file, indent=4, ensure_ascii=False)
     except:
         print("Don't save file")
 
 # dispaly how user-agent
-print(display_user_agent(headers))
+print(avatar_github('danilgubarev'))
