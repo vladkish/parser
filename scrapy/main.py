@@ -41,4 +41,4 @@ if __name__ == '__main__':
         print("Don't save file")
 
 # dispaly how user-agent
-print(avatar_github('danilgubarev'))
+print(avatar_github('AlexeyTarasov77'))

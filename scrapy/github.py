@@ -24,6 +24,14 @@ def avatar_github(username):
 
         soup = BeautifulSoup(responce.text, 'lxml')
 
+        # BlOCK LINK FROM GITHUB
+        block = soup.find('div', class_="d-flex width-full position-relative")
+        try:
+            link_on_the_project = block.find('a', id = "853865861")
+            return f'https://github.com{link_on_the_project.get('href')}'
+        except:
+            return "Don't have files"
+
         block = soup.find('div', attrs={
             'class' : 'position-relative d-inline-block col-2 col-md-12 mr-3 mr-md-0 flex-shrink-0'
         })
@@ -44,3 +52,5 @@ def avatar_github(username):
 
     else:
         return status
+
+print(avatar_github('vladkish'))
