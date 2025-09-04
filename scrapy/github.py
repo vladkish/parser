@@ -17,7 +17,7 @@ def avatar_github(username):
     if status == 200:
 
         try:
-            with open('../content.html', 'w', encoding='utf-8') as file:
+            with open('../user_page.html', 'w', encoding='utf-8') as file:
                 file.write(responce.text)
         except:
             return "Don't save img"
@@ -28,9 +28,38 @@ def avatar_github(username):
         block = soup.find('div', class_="d-flex width-full position-relative")
         try:
             link_on_the_project = block.find('a', id = "853865861")
-            return f'https://github.com{link_on_the_project.get('href')}'
-        except:
-            return "Don't have files"
+
+            link = f'https://github.com{link_on_the_project.get('href')}'
+            responce = requests.get(link, headers=headers)
+
+            try:
+                with open('../first_project.html', 'w', encoding='utf-8') as file:
+                    file.write(responce.text)
+            except:
+                return "Don't save file"
+            
+            # Creating object
+            soup = BeautifulSoup(responce.text, 'lxml')
+            
+            try:
+                block_text = soup.find('div', class_="Layout-sidebar").text
+
+                # Filter block_text
+                clean_text = block_text.strip().replace("\n", "")
+
+                try:
+                    with open('../content.html', 'w', encoding='utf-8') as file:
+                        file.write(clean_text)
+                except:
+                    return "Don't save img"
+
+            except AttributeError:
+                block_text = soup.find('div', class_="Layout-sidebar")
+
+            return clean_text
+        
+        except AttributeError as e:
+            return "Don't have files", e
 
         block = soup.find('div', attrs={
             'class' : 'position-relative d-inline-block col-2 col-md-12 mr-3 mr-md-0 flex-shrink-0'
@@ -53,4 +82,4 @@ def avatar_github(username):
     else:
         return status
 
-print(avatar_github('vladkish'))
+print(avatar_github('AlexeyTarasov77'))
