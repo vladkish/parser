@@ -55,7 +55,7 @@ def github_projects():
 
                     if f'product{index}' not in context:
                         context[f'product{index}'] = {}
-                    context[f'product{index}']['media'] = url_media
+                    context[f'product{index}']['media'] = f"https://streetwear.com.ua{url_media}"
 
                     try:
                         # size
