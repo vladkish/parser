@@ -1,0 +1,24 @@
+{
+    "product0": {
+        "media": "/img/p/cat/016/8043016a.jpg",
+        "size": "Розміри: XS",
+        "sale": "-17%",
+        "title": "Чоловічі штани карго Scarstrope чорного кольору",
+        "price": "1 599 грн.",
+        "del_price": "1 920 грн."
+    },
+    "product1": {
+        "media": "/img/p/cat/366/8043366a.jpg",
+        "size": "Розміри: XS, S",
+        "title": "Чоловічі спортивні штани оверсайз DXXN чорні",
+        "price": "1 099 грн."
+    },
+    "product2": {
+        "media": "/img/p/cat/473/8055473a.jpg",
+        "size": "Розміри: S, M, L, XL, 2XL, 3XL, 4XL",
+        "sale": "-35%",
+        "title": "Чоловічі Трикотажні Штани Карго Fenix Black",
+        "price": "1 298 грн.",
+        "del_price": "1 999 грн."
+    }
+}
