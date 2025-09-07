@@ -10,8 +10,8 @@ def github_projects():
     link = 'https://streetwear.com.ua/user/login'
 
     data = {
-        'LoginForm[login]' : 'kishkovarv@gmail.com',
-        'LoginForm[password]' : 'Kish2008V'
+        'LoginForm[login]' : 'private_data',
+        'LoginForm[password]' : 'private_data'
     }
 
     headers = {

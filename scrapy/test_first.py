@@ -11,8 +11,8 @@ headers = {
 }
 
 data = {
-    'phone_number' : '+38 (096) 14 17 176',
-    'password' : '417267'
+    'phone_number' : 'private_data',
+    'password' : 'private_data'
 }
 
 responce = session1.post(link, headers=headers, data=data)
